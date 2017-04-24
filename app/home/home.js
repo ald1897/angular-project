@@ -19,8 +19,6 @@ angular.module('myApp.home', ['ngRoute'])
     var bounds = new google.maps.LatLngBounds();
     var mapOptions = {
         mapTypeId: 'roadmap',
-        center:new google.maps.LatLng(18.508742,-68.120850),
-        zoom:1,
     };
                     
     // Display a map on the page
@@ -29,18 +27,24 @@ angular.module('myApp.home', ['ngRoute'])
         
     // Multiple Markers
     var markers = [
-        ['Presidential Suites, Punta Cana', 18.690674, -68.422102],
-        ['Copely Square Hotel, Boston', 42.348307, -71.078606]
+        ['Presidential Suites, Punta Cana DR', 18.690674, -68.422102],
+        ['Copely Square Hotel, Boston, MA', 42.348307, -71.078606],
+        ['27 Restuarant & Bar, Miami Beach, FL', 25.804574, -80.126346]
+        
     ];
                         
     // Info Window Content
     var infoWindowContent = [
         ['<div class="info_content">' +
-        '<h3 class="bg-primary alert"><a href="https://photos.google.com/album/AF1QipNzlURSgyAZARHTu3nmzyc19zVMoWdAqsrGRJJa">Punta Cana</a></h3>' +
-        '<p>Presidential Suites Punta Cana by Lifestyle is set within the lush tropical area of Punta Cana, with a Caribbean hideaway vibe, and scrumptiously appointed one, two and three bedroom suites. Fully furnished living and kitchen area, with stainless steel appliances and designer furnishings set the standard for lavish comfort.</p>' +        '</div>'],
+        '<h3 class="text-primary"><a href="https://photos.google.com/album/AF1QipNzlURSgyAZARHTu3nmzyc19zVMoWdAqsrGRJJa" class="text-primary">Punta Cana</a></h3>' +
+        '<p class="text-primary">Presidential Suites Punta Cana by Lifestyle is set within the lush tropical area of Punta Cana, with a Caribbean hideaway vibe, and scrumptiously appointed one, two and three bedroom suites. Fully furnished living and kitchen area, with stainless steel appliances and designer furnishings set the standard for lavish comfort.</p>' +        '</div>'],
         ['<div class="info_content">' +
-        '<h3>Palace of Westminster</h3>' +
-        '<p>The Palace of Westminster is the meeting place of the House of Commons and the House of Lords, the two houses of the Parliament of the United Kingdom. Commonly known as the Houses of Parliament after its tenants.</p>' +
+        '<h3 class="text-primary">The Copely Square Hotel</h3>' +
+        '<p class="text-primary">Copley Square Hotel is Boston boutique at its best, reflecting that unmistakable originality, charm and character this town was built upon. Because it’s been around since 1891, the place feels more like a personality than a property. As a result, our staff is just as excited about delivering the authentic Boston experience as you are about living it while you’re here.</p>' +
+        '</div>'],
+        ['<div class="info_content">' +
+        '<h3 class="text-primary">Miami Beach</h3>' +
+        '<p class="text-primary">Best cocktails ever.</p>' +
         '</div>']
     ];
         
@@ -71,7 +75,7 @@ angular.module('myApp.home', ['ngRoute'])
 
     // Override our map zoom level once our fitBounds function runs (Make sure it only runs once)
     var boundsListener = google.maps.event.addListener((map), 'bounds_changed', function(event) {
-        this.setZoom(14);
+        this.setZoom(3);
         google.maps.event.removeListener(boundsListener);
     });
     
