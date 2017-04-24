@@ -1,106 +1,69 @@
 <!DOCTYPE html>
-<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
-<head style=>
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Alex Dickinson</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="app.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-   <!-- In production use:  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>  -->
-  <script src="bower_components/angular/angular.js"></script>
-  <script src="bower_components/angular-route/angular-route.js"></script>
-  <script src="app.js"></script>
-  <script src="home/home.js"></script>
-  <script src="sports/sports.js"></script>
-  <script src="news/news.js"></script>
-  <script src="social/social.js"></script>
+<html lang="en" ng-app="myApp" class="no-js">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Alex Dickinson</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- StyleSheets -->
+    <link rel="stylesheet" href="app.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <!-- Js Files/Libraries -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+          <!-- In production use:  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>  -->
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular-route/angular-route.js"></script>
+    <script src="app.js"></script>
+    <script src="home/home.js"></script>
+    <script src="sports/sports.js"></script>
+    <script src="news/news.js"></script>
+    <script src="social/social.js"></script>
+    <script src="components/version/version.js"></script>
+    <script src="components/version/version-directive.js"></script>
+    <script src="components/version/interpolate-filter.js"></script>
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBiinqgU6m164Gbh0J38APi-AG6jzeCX7Y&callback=initMap"
+  type="text/javascript"></script>
 
-  <script src="components/version/version.js"></script>
-  <script src="components/version/version-directive.js"></script>
-  <script src="components/version/interpolate-filter.js"></script>
-  <script type="text/javascript" src="https://www.google.com/jsapi"></script>
-    <script src="http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.js"
-    type="text/javascript"></script>
-
-    <style type="text/css">
-    @import url("http://www.google.com/uds/solutions/dynamicfeed/gfdynamicfeedcontrol.css");
-
-    #feedControl {
-    margin-top : 10px;
-    margin-left: auto;
-    margin-right: auto;
-    width : 440px;
-    font-size: 12px;
-    color: #9CADD0;
-    }
-    </style>
-    <script type="text/javascript">
-    function load() {
-    var feed ="http://feeds.bbci.co.uk/news/world/rss.xml";
-    new GFdynamicFeedControl(feed, "feedControl");
-
-    }
-    google.load("feeds", "1");
-    google.setOnLoadCallback(load);
-    </script>
-
-
-<!-- jQuery library -->
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
-</head>
-
-<body>
-  <div class="navbar navbar-default navbar-fixed-top">
-    <div class="container-fluid">
     
-      <div class="navbar-header">
-        <a class="navbar-brand" href="index.html#!/home">Alex Dickinson</a>
-      </div>
+  </head>
 
-      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-        <ul class="nav navbar-nav">
-          <li><a href="index.html#!/view1">Home </a></li>
-          <li><a href="index.html#!/news">News </a></li>
-          <li><a href="index.html#!/sports">Sports</a></li>
-          <li><a href="index.html#!/social">Social</a></li>
-          <!--<li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-              <li><a href="#">Action</a></li>
-              <li><a href="#">Another action</a></li>
-              <li><a href="#">Something else here</a></li>
-              <li class="divider"></li>
-              <li><a href="#">Separated link</a></li>
-              <li class="divider"></li>
-              <li><a href="#">One more separated link</a></li>
-            </ul>
-          </li>-->
-        </ul>
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="mailto:alexdickinson04@gmail.com">Contact</a></li>
-        </ul>
-        <form class="navbar-form navbar-right" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="Search">
-          </div>
-          <button type="submit" class="btn btn-warning">Submit</button>
-        </form>
+  <body>
+    <div class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+      
+        <div class="navbar-header">
+          <a class="navbar-brand" href="index.html#!/home">Alex Dickinson</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="index.html#!/home">Home </a></li>
+            <li><a href="index.html#!/news">News </a></li>
+            <li><a href="index.html#!/sports">Sports</a></li>
+            <li><a href="index.html#!/social">Social</a></li>
+          </ul>
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="mailto:alexdickinson04@gmail.com">Contact</a></li>
+          </ul>
+          <form class="navbar-form navbar-right" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Search">
+            </div>
+            <button type="submit" class="btn btn-warning">Submit</button>
+          </form>
+        </div>
       </div>
     </div>
-  </div>
-</br>
-</br>
-</br>
-<div id="body">
-<div id="feedControl">Loading...</div>
-</div>
-<div ng-view>
-  
-</div>
-  
-</body>
+  </br>
+  </br>
+  </br>
+  <div ng-view></div>
+  </body>
 </html>
+
+
+<!--
+GET: retrieves information from the specified source (you just saw this one!)
+POST: sends new information to the specified source.
+PUT: updates existing information of the specified source.
+DELETE: removes existing information from the specified source. -->
