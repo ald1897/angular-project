@@ -7,6 +7,7 @@ angular.module('myApp', [
   'myApp.sports',
   'myApp.news',
   'myApp.social',
+  'myApp.travel',
   'myApp.version'
 ]).
 config(['$locationProvider', '$routeProvider', function($locationProvider, $routeProvider) {
