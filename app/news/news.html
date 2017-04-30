@@ -1,5 +1,5 @@
 <head>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/postscribe/2.0.8/postscribe.min.js"></script>
 
 </head>
 <body></body>
@@ -7,7 +7,18 @@
   <div class="panel-heading">Welcome !</div>
     <div class="panel-body panel-default">
       <h2>The is the News Page</h2>
-        
+        <p></p>
+
+          <div class="text-danger" id="reddit"><h5>Reddit</h5></div>
+
+<script type="text/javascript">
+  // jQuery used as an example of delaying until load.
+  $(function() {
+    // Build url params and make the ad call
+    postscribe('#reddit', '<script src="https://www.reddit.com/hot/.embed?limit=50&t=all&style=off" type="text/javascript"><\/script>>');
+  });
+</script>
+
         <p>Use the contextual background classes to provide "meaning through colors":</p>
         <p class="bg-primary alert">>This text is important.</p>
         <p class="bg-success alert">This text indicates success.</p>
